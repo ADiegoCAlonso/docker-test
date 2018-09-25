@@ -5,17 +5,17 @@ import argparse
 
 
 if __name__ == '__main__':
-    print("Hello")
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--param1",
+        "--your-name",
         type=str,
         help="Test param",
         required=True
     )
     args = parser.parse_args()
 
-    print("{}".format(args.param1))
+    name = args.your_name
 
-
+    print("Hello, {name}!".format(name=name))
+    print("Bye, {name}!".format(name=name))
